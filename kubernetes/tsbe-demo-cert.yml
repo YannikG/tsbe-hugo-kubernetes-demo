@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tsbe-demo-homepage-tls
+  namespace: default
+spec:
+  dnsNames:
+    - tsbe-demo.yannikgartmann.ch
+  secretName: tsbe-demo-homepage-tls
+  issuerRef:
+    name: letsencrypt-cluster-issuer
+    kind: ClusterIssuer
