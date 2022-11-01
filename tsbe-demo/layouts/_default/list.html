@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <h1>{{.Title}}</h1>
+    <h2>Beiträge</h2>
+    {{ range .Pages }}
+        <div>
+            <div style="font-size:20px;">
+                <a href="{{.Permalink }}">{{.Title}}</a>
+            </div>
+            <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+        </div>
+    {{ end }}
+    {{ partial "footer" . }}
+</body>
+</html>
