@@ -12,7 +12,7 @@ spec:
     secretName: tsbe-demo-homepage-tls
   rules:
 
-  - host: tsbe-demo.ch
+  - host: tsbe-demo.yannikgartmann.ch
     http:
       paths:
       - pathType: Prefix
